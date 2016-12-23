@@ -1,6 +1,6 @@
 default['cpan_client']['bootstrap']['packages'] = ['curl']
 
-case platform
+case node['platform']
 when 'centos'
     default['cpan_client']['bootstrap']['packages'] << 'perl-devel'
     default['cpan_client']['bootstrap']['packages'] << 'perl-CPAN'
