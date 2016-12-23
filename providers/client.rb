@@ -144,7 +144,7 @@ end
 def perl5lib_stack
 
   perl5lib = Array.new
-  perl5lib += node.cpan_client.default_inc
+  perl5lib += node['cpan_client']['default_inc']
   perl5lib += @installer.inc
   perl5lib.join(':')
   
